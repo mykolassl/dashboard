@@ -1,3 +1,22 @@
+:root {
+    --clr-900: #0F172A;
+    --clr-800: #1e293b;
+    --clr-700: #334155;
+    --clr-600: #475569;
+    --clr-500: #64748b;
+    --clr-400: #94a3b8;
+    --clr-300: #cbd5e1;
+    --clr-200: #e2e8f0;
+    --clr-100: #f1f5f9;
+    --clr-50: #f8fafc;
+
+    --ff-main: 'Roboto', sans-serif;
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+}
+
 *,
 *::before,
 *::after {
@@ -12,23 +31,24 @@ html {
 
 body {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: clamp(250px, 20%, 25rem) 1fr;
     grid-template-rows: 1fr 4fr;
     min-height: 100vh;
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(249, 249, 249);
+    background-color: var(--clr-200);
+    font-family: var(--ff-main);
+    color: var(--clr-900);
 }
 
-/* Side navigation */
+/************************ Side navigation ************************/
 
 aside {
+    grid-row: 1 / span 2;
     display: flex;
     flex-direction: column;
     gap: 3em;
-    grid-row: 1 / span 2;
     padding: 2em 1em;
-    background-color: rgb(40, 40, 40);
-    color: rgb(249, 249, 249);
+    background-color: var(--clr-800);
+    color: var(--clr-100);
 }
 
 .logo-container {
@@ -39,7 +59,7 @@ aside {
 
 .logo {
     width: 30px;
-    fill: rgb(249, 249, 249);
+    fill: var(--clr-100);
 }
 
 .logo-container > h1 {
@@ -57,16 +77,23 @@ aside {
 }
 
 .nav li > a {
-    color: rgb(249, 249, 249);
+    color: var(--clr-100);
     text-decoration: none;
 }
 
+.nav li > a:hover {
+    text-decoration: underline;
+}
+
+/************************ Header ************************/
+
 header {
     grid-column: 2 / -1;
-    background-color: black;
+    background-color: var(--clr-300);
 }
+
+/************************ Main site content ************************/
 
 main {
     grid-column: 2 / -1;
-    background-color: black;
 }
