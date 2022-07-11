@@ -32,7 +32,7 @@ html {
 body {
     display: grid;
     grid-template-columns: clamp(250px, 20%, 25rem) 1fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: min-content 1fr;
     min-height: 100vh;
     background-color: var(--clr-200);
     font-family: var(--ff-main);
@@ -101,11 +101,11 @@ main {
 
 .content-wrapper {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 3fr 1fr;
     gap: 2.5rem;
 }
 
-.content-wrapper > div > h1 {
+.content-wrapper div > h1 {
     margin-bottom: 0.625rem;
     font-weight: var(--fw-medium);
 }
@@ -162,6 +162,15 @@ main {
     background-color: var(--clr-200);
 }
 
+/* Suggestions */
+
+.suggestions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+
 /* Announcements */
 
 .announcements-container > .card {
@@ -174,7 +183,7 @@ main {
 }
 
 .card > p ~ h4 {
-    border-top: 1px solid var(--clr-900);
+    border-top: 1px solid var(--clr-300);
 }
 
 .announcements-container .card p:not(:last-child) {
@@ -183,4 +192,39 @@ main {
 
 .announcements-container .card h4:not(:first-of-type) {
     padding-top: 1.25rem;
+}
+
+/* Trending */
+
+.trending-container > .card {
+    border: none;
+}
+
+.trending-user {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.trending-user .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #EA9F48;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.trending-user .icon > svg {
+    width: 30px;
+    fill: var(--clr-100);
+}
+
+.user-info-container .username {
+    font-weight: var(--fw-regular);
+}
+
+.user-info-container .user-info {
+    font-weight: var(--fw-light);
 }
