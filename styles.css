@@ -113,18 +113,36 @@ main {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
     padding: 1.25rem;
     background-color: var(--clr-100);
     border-left: 5px solid #EA9F48;
     border-radius: 5px;
-    box-shadow: 0px 2px 8px 0px var(--clr-300); 
+    box-shadow: 0px 2px 8px 0px #00000039; 
 }
 
 .card > h4 {
-    margin-bottom: 0.625rem;
     font-weight: var(--fw-medium);
 }
 
 .card > p {
     font-weight: var(--fw-light);
+}
+
+.icons-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.25rem;
+}
+
+.icons-container > .icon {
+    width: 1.5rem;
+    fill: var(--clr-900);
+    border-radius: 50%;
+}
+
+.icons-container > .icon:hover {
+    background-color: var(--clr-200);
 }
