@@ -60,10 +60,16 @@ aside {
 .logo {
     width: 30px;
     fill: var(--clr-100);
+    transition: fill 0.15s 0s ease-in-out;
+}
+
+.logo:hover {
+    fill: #EA9F48;
 }
 
 .logo-container > h1 {
-    font-size: 1.75rem;
+    font-size: 1.7rem;
+    font-weight: var(--fw-medium);
 }
 
 .nav {
@@ -89,9 +95,11 @@ aside {
 
 header {
     grid-column: 2 / -1;
-    padding: 2.5rem 1.875rem;
+    padding: 2em 1.875em;
     background-color: var(--clr-300);
 }
+
+/* Search bar */
 
 header form {
     position: relative;
@@ -101,6 +109,8 @@ header form {
 }
 
 .search-icon {
+    display: flex;
+    align-items: center;
     position: absolute;
     padding-inline: 0.8em;
 }
@@ -112,18 +122,77 @@ header form {
 form input {
     width: 100%;
     max-width: 40rem;
-    padding-left: 2.2em;
-    padding-block: 0.4em;
+    padding-left: 3.3em;
+    padding-block: 0.6em;
     font-family: var(--ff-main);
-    font-size: 1.25rem;
+    font-size: 0.875rem;
     border: none;
     border-radius: 50px;
+    transition: box-shadow 0.15s 0s ease-in-out;
 }
 
 form input:focus-visible,
 form input:hover {
     box-shadow: 0px 2px 8px 0px #00000039;
     outline: none;
+}
+
+/* Greeting and buttons */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.user-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    margin-right: 0.625rem;
+    background-color: #EA9F48;
+    border-radius: 50%;
+    box-shadow: 0px 2px 8px 0px #00000039;
+}
+
+.user-icon > svg {
+    width: 30px;
+    fill: var(--clr-100);
+}
+
+.greeting-container {
+    display: flex;
+    align-items: center;
+}
+
+.greeting {
+    font-weight: var(--fw-light);
+}
+
+.username {
+    font-size: 1.125rem;
+    font-weight: var(--fw-medium);
+}
+
+.buttons-container {
+    display: flex;
+    gap: 1em;
+}
+
+.buttons-container > button {
+    padding: 0.8em 2.5em;
+    background-color: #EA9F48;
+    color: var(--clr-100);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: box-shadow 0.15s 0s ease-in-out;
+}
+
+.buttons-container > button:hover {
+    box-shadow: 0px 2px 8px 0px #00000039;
 }
 
 /************************ Main site content ************************/
@@ -141,6 +210,7 @@ main {
 
 .content-wrapper div > h1 {
     margin-bottom: 0.625rem;
+    font-size: 1.7rem;
     font-weight: var(--fw-medium);
 }
 
@@ -166,6 +236,11 @@ main {
     border-left: 5px solid #EA9F48;
     border-radius: 5px;
     box-shadow: 0px 2px 8px 0px #00000039; 
+    transition: transform 0.3s 0s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .card > p {
@@ -186,6 +261,7 @@ main {
     fill: var(--clr-900);
     border-radius: 50%;
     cursor: pointer;
+    transition: background-color 0.15s 0s ease-in-out;
 }
 
 .icon > svg {
