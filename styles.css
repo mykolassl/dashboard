@@ -63,7 +63,7 @@ aside {
         position: fixed;
         width: 100vw;
         height: 100vh;
-        transform: translateX(101%);
+        transform: translateX(120%);
     }
 
     aside.open {
@@ -102,7 +102,14 @@ aside {
     gap: 1.25em;
 }
 
+.nav .icon > svg {
+    fill: var(--clr-100);
+}
+
 .nav > li {
+    display: flex;
+    align-items: center;
+    gap: 1em;
     list-style: none;
 }
 
